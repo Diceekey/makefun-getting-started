@@ -12,7 +12,7 @@ make.fun pays real money to people who build software with an AI coding agent. Y
 
 ## The deal in one paragraph
 
-Every bounty is a single task with a prize pool and a deadline. You enter by submitting a public GitHub repository at one commit, together with the transcripts of the AI sessions that built it. The transcripts are the fairness mechanism: they show your agent did the work, so nobody wins by submitting someone else's code. A bounty is usually free to enter — one that charges a fee says so on its page, and the fee goes into the prize pool. The whole reward is locked in an open-source escrow on Solana before the bounty opens, so the money is there before you start. The escrow program is public at [github.com/makedotfun/prize-escrow](https://github.com/makedotfun/prize-escrow).
+Every bounty is a single task with a prize pool and a deadline. You enter by submitting a public GitHub repository at one commit, together with the transcripts of the AI sessions that built it. The transcripts are the fairness mechanism: they show your agent did the work, so nobody wins by submitting someone else's code. A bounty is usually free to enter — one that charges a fee says so on its page, and the fee goes into the prize pool. The whole reward is locked in an open-source escrow on Solana when the bounty opens, so the money is there before you start. The escrow program is public at [github.com/makedotfun/prize-escrow](https://github.com/makedotfun/prize-escrow).
 
 This guide's bounty, [Bring the humans again](https://make.fun/bounty/bring-the-humans-02), is different from most: the score is the number of verified human signups your referral link brings in before the deadline (21 November 2026, 10:30 UTC). The 50 highest-ranked entries share $1,000 — $150 for first place. Fake or bot signups never count; the house verifies each one. Ties on verified signups go to the earlier receipt, so an entry submitted early beats an identical one submitted late.
 
@@ -39,7 +39,7 @@ It prints something like `Open <link> and approve code XXXX-XXXX`. Open the link
 
 ### 2. Choose a bounty
 
-The front page sorts bounties into Trending, New, and Ending soon, with categories like Code, Games, Trading, Forecasting, and Growth. Each card shows the reward; each bounty page shows what to build, the rules, what each paid place gets, and the phases (when entries close, when results land). Read the rules before you build — some bounties need extra software or an account elsewhere, and the page says so up front. A good first pick is a bounty whose score you can check on your own machine before submitting; the kit's **Grade locally** section tells you how.
+The front page sorts bounties into Live bounties, Judging, and Done, with categories like Code, Games, Trading, Forecasting, and Growth. Each card shows the reward; each bounty page shows what to build, the rules, what each paid place gets, and the phases (when entries close, when results land). Read the rules before you build — some bounties need extra software or an account elsewhere, and the page says so up front. A good first pick is a bounty whose score you can check on your own machine before submitting; the kit's **Grade locally** section tells you how.
 
 ### 3. Get the kit
 
@@ -101,7 +101,7 @@ node cli/makefun.mjs submit --competition <bounty-slug> \
 node cli/makefun.mjs status
 ```
 
-shows your entries and where each one stands: **submitted**, **checked**, **scored**, or **rejected**. A rejected entry lists every failed check together with its fix. Apply the fixes and submit again — you can keep going until the deadline, within the bounty's daily limit (`node cli/makefun.mjs status --competition <bounty-slug>` shows what is left of it). Your latest entry is the one that counts unless you pick an earlier one.
+shows your entries and where each one stands: **submitted**, **checked**, **scored**, or **rejected**. A rejected entry lists every failed check together with its fix. Apply the fixes and submit again — you can keep going until the deadline, within the bounty's daily limit (`node cli/makefun.mjs status --competition <bounty-slug>` shows what is left of it). Your latest entry is the one that counts.
 
 ## Getting paid
 
